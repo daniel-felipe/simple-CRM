@@ -1,0 +1,29 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class ProjectStatusSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        \App\Models\ProjectStatus::factory()->createMany([
+            [
+                'name' => 'stopped',
+            ],
+            [
+                'name' => 'on the way',
+            ],
+            [
+                'name' => 'finished',
+            ],
+        ]);
+    }
+}
