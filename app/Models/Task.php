@@ -10,4 +10,9 @@ class Task extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
+    public function project()
+    {
+        return $this->belongsTo(Project::class);
+    }
 }
